@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="../w3.css">
 </head>
 <body class="w3-light-grey">
- <div class="w3-container w3-blue-grey w3-opacity w3-center">
-     <h1>Super app!</h1>
+ <div class="w3-container w3-light-blue w3-round-xlarge w3-center">
+     <h1>My app</h1>
  </div>
 
 

@@ -1,6 +1,7 @@
 package app.model;
 
 import app.entities.User;
+import com.sun.org.apache.bcel.internal.generic.LUSHR;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,5 +24,14 @@ public class Model {
 
     public List<String> list() {
     return model.stream().map(User::getName).collect(Collectors.toList());
+    }
+
+    public String delete(User u) {
+
+        if (model.contains(u)) {
+            model.remove(u);
+            return u.getName();
+        }
+        return null;
     }
 }
