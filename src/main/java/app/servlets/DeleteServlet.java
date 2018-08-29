@@ -16,15 +16,4 @@ public class DeleteServlet extends HttpServlet {
         RequestDispatcher rd = req.getRequestDispatcher("views/delete.jsp");
         rd.forward(req, resp);
     }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String userName = req.getParameter("deleteN");
-        String userPassword = req.getParameter("deleteP");
-        User user = new User(userName, userPassword);
-        Model m = Model.getInstance();
-        req.setAttribute("answer", m.delete(user));
-        RequestDispatcher rd = req.getRequestDispatcher("views/delete.jsp");
-        rd.forward(req,resp);
-    }
 }

@@ -13,15 +13,10 @@ import java.util.List;
 
 public class ListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Model m = Model.getInstance();
-        List<String> list = m.list();
-        req.setAttribute("users", list);
         RequestDispatcher rd = req.getRequestDispatcher("views/list.jsp");
         rd.forward(req,resp);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-    }
+
 }
